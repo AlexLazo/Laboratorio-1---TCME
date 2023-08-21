@@ -6,8 +6,6 @@ const Controlado = () => {
     const [newTodoTitle, setNewTodoTitle] = useState('');
     const [newDescripcion, setNewDescription] = useState('');
     const [newState, setNewState] = useState('');
-    const [isCompletedScreen] = useState(false);
-
 
     // Formulario controlado
     const handleAddNewToDo = () => {
@@ -99,8 +97,7 @@ const Controlado = () => {
                 </div>
 
                 <div className="todo-list">
-                    {isCompletedScreen === false &&
-                        allTodos.map((item, index) => (
+                    {allTodos.map((item, index) => (
                             <div className="todo-list-item" key={index}>
                                 <div>
                                     <h3>{item.title}</h3>
